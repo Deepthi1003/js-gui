@@ -18,7 +18,7 @@ const updateWithMultiply = async (event) => {
     const i = parseInt(document.querySelector('#firstNumber').value)
     const j = parseInt(document.querySelector('#secondNumber').value)
     const k = parseInt(document.querySelector('#thirdNumber').value)
-    const ans = `${s}, your volume is ${multiply(i, j ,k)}.`
+    const ans = ` your volume is ${multiply(i, j ,k)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
@@ -44,7 +44,7 @@ document.addEventListener('focusout', event => {
 })
 
 document.addEventListener('click', event => {
-  if (event.target && event.target.id === 'addButton') { updateWithAdd(event) }
+  if (event.target && event.target.id === 'addButton') { updateWithMultiply(event) }
 })
 
 document.addEventListener('click', event => {
