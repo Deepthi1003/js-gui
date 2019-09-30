@@ -34,7 +34,7 @@ document.addEventListener('focusout', event => {
 })
 
 document.addEventListener('click', event => {
-  if (event.target && event.target.id === 'addButton') { updateWithNumbpeople(event) }
+  if (event.target && event.target.id === 'addButton') { Numbpeople(event) }
 })
 
 
