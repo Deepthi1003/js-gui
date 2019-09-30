@@ -11,9 +11,9 @@ const validate = async (event) => {
   }
 }
 
-const updateWithMultiply = async (event) => {
+const Numbpeople = async (event) => {
   document.querySelector('#result').innerHTML = ''
-  if (document.querySelector('#peoplePerCar').checkValidity() && document.querySelector('#cars').checkValidity() && document.querySelector('#thirdNumber').checkValidity()) {
+  if (document.querySelector('#peoplePerCar').checkValidity() && document.querySelector('#cars').checkValidity()) {
     const regex = /[^a-zA-Z_]/g
     const i = parseInt(document.querySelector('#peoplePerCar').value)
     const j = parseInt(document.querySelector('#cars').value)
@@ -34,7 +34,7 @@ document.addEventListener('focusout', event => {
 })
 
 document.addEventListener('click', event => {
-  if (event.target && event.target.id === 'addButton') { updateWithnumbpeople(event) }
+  if (event.target && event.target.id === 'addButton') { updateWithNumbpeople(event) }
 })
 
 
