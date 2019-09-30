@@ -1,4 +1,4 @@
-const multiply = (x, y, z) => { return x * y * z }
+const numbpeople = (x, y) => { return x * y  }
 
 const validate = async (event) => {
   console.log(`triggered validate on ${event.target.id}`)
@@ -13,12 +13,11 @@ const validate = async (event) => {
 
 const updateWithMultiply = async (event) => {
   document.querySelector('#result').innerHTML = ''
-  if (document.querySelector('#firstNumber').checkValidity() && document.querySelector('#secondNumber').checkValidity() && document.querySelector('#thirdNumber').checkValidity()) {
+  if (document.querySelector('#peoplePerCar').checkValidity() && document.querySelector('#cars').checkValidity() && document.querySelector('#thirdNumber').checkValidity()) {
     const regex = /[^a-zA-Z_]/g
-    const i = parseInt(document.querySelector('#firstNumber').value)
-    const j = parseInt(document.querySelector('#secondNumber').value)
-    const k = parseInt(document.querySelector('#thirdNumber').value)
-    const ans = ` your volume is ${multiply(i, j ,k)}.`
+    const i = parseInt(document.querySelector('#peoplePerCar').value)
+    const j = parseInt(document.querySelector('#cars').value)
+    const ans = ` Number of people is ${numbpeople(i, j)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
@@ -28,15 +27,14 @@ const updateWithMultiply = async (event) => {
 // focusout is like blur, but it bubbles up
 
 document.addEventListener('focusout', event => {
-  if ((event.target && event.target.id === 'firstNumber') ||
-    (event.target && event.target.id === 'secondNumber') ||
-    (event.target && event.target.id === 'thirdNumber')){
+  if ((event.target && event.target.id === 'peoplePerCar') ||
+    (event.target && event.target.id === 'cars')){
     validate(event)
   }
 })
 
 document.addEventListener('click', event => {
-  if (event.target && event.target.id === 'addButton') { updateWithMultiply(event) }
+  if (event.target && event.target.id === 'addButton') { updateWithnumbpeople(event) }
 })
 
 
